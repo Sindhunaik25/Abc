@@ -1,4 +1,4 @@
-package com.arpita.oops;
+package com.sindhu.calc;
 import java.util.*;
 
 public class Calculation {

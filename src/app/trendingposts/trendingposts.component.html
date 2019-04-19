@@ -1,0 +1,115 @@
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ 
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="assets/images/nature.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
+<!-- <div class="card-deck">
+ <div class="card"  style="width: 18rem;" width="70px">
+  <div class="card-body">
+    <p class="card-text">This image is in the middle</p>
+  </div>
+  <img  class="img-fluid" src="assets/images/nature.jpg" alt="Card image" width="300px">
+  <div class="card-body">
+    <p class="card-text">of a card.</p>
+  </div>
+</div> 
+</div> -->
+<!-- <div class="card"   width="30px">
+   <div class="card-body">
+   
+  </div> 
+  <img   src="assets/images/nature.jpg" alt="Card image" width="300px">
+   <div class="card-body">
+  
+  </div> 
+</div> -->
+
+
+<div class="container">
+<!-- 	<div class="row">
+		 <h2>Some Title</h2> 
+	</div> -->
+	
+	<div class="block">
+      <div class="row">
+          <div *ngFor="let post of posts;let in = index">
+        <div class="span4" >
+          <img class="img-left" src="{{posts[in].imageLink}}"/>
+          <!-- <div class="content-heading"><h3>Experience &nbsp </h3></div> -->
+         <p> <i class="material-icons" style="font-size:36px">person_pin</i>{{posts[in].userName}}</p>
+         
+          <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+          <!-- <a href="#" class="fa fa-thumbs-o-up" style="font-size:36px"></a> &nbsp;  &nbsp; -->
+            {{posts[in].likes}}
+          <button type="submit"(click)="onLike(posts[in].likes)" class="btn btn-default btn-sm">
+            <span class="fa fa-thumbs-o-up"></span> 
+          </button>&nbsp;&nbsp;
+
+
+          <button type="button" class="btn btn-default btn-sm">
+            <span class="fa fa-comment"></span> Comment
+          </button>&nbsp;&nbsp;
+
+
+
+
+          
+            <!-- <div class="search"> -->
+               <input type="text"  placeholder="Comment plz">
+               <button type="submit" (click)="onComment()">
+                 <i class="fa fa-comment"></i>
+              </button>
+            <!-- </div> -->
+      
+
+
+
+        </div><!-- span4 -->
+        <br><br>
+        </div> <!-- for loop -->
+     </div><!-- block -->
+     <br/>
+
+    </div><!-- row -->
+    
+</div><!-- container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
